@@ -1,6 +1,9 @@
 package br.com.projetopi3.ichirakuburguer.dto.produto;
 
-public class Produto {
+import org.springframework.stereotype.Component;
+
+@Component
+public class ProdutoDto {
 
     private Integer codigo;
 
@@ -9,8 +12,6 @@ public class Produto {
     private String descricao;
 
     private Long codigoBarras;
-
-    private Float precoVenda;
 
     private Float estoque;
 
@@ -48,13 +49,6 @@ public class Produto {
         this.codigoBarras = codigoBarras;
     }
 
-    public Float getPrecoVenda() {
-        return precoVenda;
-    }
-
-    public void setPrecoVenda(Float precoVenda) {
-        this.precoVenda = precoVenda;
-    }
 
     public Float getEstoque() {
         return estoque;
@@ -70,5 +64,17 @@ public class Produto {
 
     public void setAtivo(Boolean ativo) {
         this.ativo = ativo;
+    }
+
+    @Override
+    public String toString() {
+        return "ProdutoDto{" +
+                "codigo=" + codigo +
+                ", produtoNome='" + produtoNome + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", codigoBarras=" + codigoBarras +
+                ", estoque=" + estoque +
+                ", ativo=" + ativo +
+                '}';
     }
 }
