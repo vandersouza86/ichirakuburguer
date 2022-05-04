@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Lista de Produtos</title>
 </head>
 <body>
-<h1>Lista de Produtos</h1>
+<h4 style="margin-left: 20px;">Lista de Produtos</h4>
 
-<table class="table">
+<table class="table" style="width: 90%; margin-left: 20px;">
     <thead>
     <tr>
         <th scope="col">Código</th>
@@ -37,6 +38,7 @@
     </tbody>
 </table>
 
-<a th:href="@{/produto/novoproduto}"></a>
+<a th:href="@{novoproduto}" style="margin-left: 20px;">Novo produto</a>
+
 </body>
 </html>
